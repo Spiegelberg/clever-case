@@ -59,6 +59,7 @@
     canProceed: boolean;
     selectedOption: string | null; // Preselected option
   }>();
+
   const emit = defineEmits(['on-next', 'on-prev', 'update:canProceed', 'update:answer']);
 
   // State to track the selected option
@@ -94,50 +95,13 @@
     emit('update:canProceed', !!localSelectedOption.value); // Enable/disable "Next" button
   };
 
-  // Emit navigation events
+  // Emit navigation events goToNextStep
   const goToNextStep = () => {
     emit('on-next');
   };
 
+  // Emit navigation events goToPreviousStep
   const goToPreviousStep = () => {
     emit('on-prev');
   };
 </script>
-
-<style scoped>
-  /* Slide and Fade Transition */
-  .slide-fade-enter-active,
-  .slide-fade-leave-active {
-    transition: all 0.5s ease;
-  }
-  .slide-fade-enter-from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  .slide-fade-leave-to {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  /* Fade Transition */
-  .fade-enter-active,
-  .fade-leave-active {
-    transition: opacity 0.5s ease;
-  }
-  .fade-enter-from,
-  .fade-leave-to {
-    opacity: 0;
-  }
-  /* List Transition */
-  .list-enter-active,
-  .list-leave-active {
-    transition: all 0.8s ease;
-  }
-  .list-enter-from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  .list-leave-to {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-</style>

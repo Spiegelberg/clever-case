@@ -17,15 +17,7 @@ export default defineNuxtConfig({
     },
   },
 
-  css: ['~/assets/css/main.css'],
-  vite: {
-    css: {
-      // Enable CSS modules with custom class name hashing
-      modules: {
-        generateScopedName: '[local]__[hash:base64:8]', // Customize class name format
-      },
-    },
-  },
+  css: ['~/assets/css/main.css', '~/assets/css/animations.css'],
   postcss: {
     plugins: {
       tailwindcss: {},
