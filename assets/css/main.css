@@ -1,0 +1,39 @@
+/* assets/css/main.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: 'No5';
+    src: url('/No5VAR.ttf') format('truetype');
+    font-style: normal;
+    font-display: swap;
+  }
+}
+
+@layer base {
+  :root {
+    --font-primary: 'No5', sans-serif;
+    font-family: 'No5';
+  }
+
+  .text-nav-menu {
+    @apply text-menu; /* Applies the Tailwind-defined class */
+  }
+
+  h1 {
+    @apply text-h1;
+    @apply font-light;
+  }
+
+  h2 {
+    @apply text-h2;
+    @apply font-light;
+  }
+
+  h3 {
+    @apply text-h3;
+    @apply font-light;
+  }
+}
