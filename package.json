@@ -10,6 +10,9 @@
     "postinstall": "nuxt prepare",
     "typecheck": "tsc --noEmit"
   },
+  "engines": {
+    "node": ">=20.9.0"
+  },
   "dependencies": {
     "@nuxt/fonts": "^0.10.2",
     "@nuxtjs/device": "^3.2.4",
