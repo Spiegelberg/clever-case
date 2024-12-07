@@ -4,6 +4,7 @@
   >
     <!-- Hidden Input -->
     <input type="checkbox" :checked="modelValue" @change="toggleCheckbox" class="hidden" />
+
     <!-- Checkbox Content -->
     <div class="flex items-center gap-2">
       <div class="w-6 h-6 flex items-center justify-center border border-cleverDark bg-cleverGreen">
@@ -25,6 +26,7 @@
           />
         </svg>
       </div>
+
       <!-- Label Text -->
       <span class="text-p text-cleverGreen">{{ label }}</span>
     </div>
@@ -52,5 +54,3 @@
     }
   };
 </script>
-
-<style scoped></style>

@@ -10,16 +10,14 @@
     font-style: normal;
     font-display: swap;
   }
-}
 
-@layer base {
   :root {
     --font-primary: 'No5', sans-serif;
     font-family: 'No5';
   }
 
   .text-nav-menu {
-    @apply text-menu; /* Applies the Tailwind-defined class */
+    @apply text-p; /* Applies the Tailwind-defined class */
   }
 
   h1 {

@@ -1,12 +1,11 @@
 <template>
   <header :class="['relative bg-transparent z-10', textColorClass]">
-    <!-- <header class="relative bg-transparent z-10" :class="textColorClass"> -->
     <!-- Navigation Bar -->
     <nav class="flex items-center justify-between px-12 py-6 h-[72px]">
       <ul class="basis-5/12 flex gap-8 text-nav-menu">
-        <NuxtLink to="/">Privatkørsel</NuxtLink>
-        <NuxtLink to="/product-selector">Erhverv</NuxtLink>
-        <NuxtLink to="/product-selector/results">Boligforeninger</NuxtLink>
+        <NuxtLink to="/">Forside</NuxtLink>
+        <NuxtLink to="/product-selector">Produktvælger</NuxtLink>
+        <NuxtLink to="/product-selector/results">Resultat</NuxtLink>
       </ul>
       <!-- Wrapper around Logo for centering -->
       <div class="basis-2/12 flex items-center justify-center">
@@ -44,10 +43,10 @@
     },
     theme: { type: String, default: 'dark' },
   });
-  const textColorClass = ref('');
 
-  // Computed classes for the header
+  const textColorClass = ref('');
   const hasBackground = computed(() => !!props.hasBackground);
+
   // Watch for changes to `theme` prop
   watch(
     () => props.theme,
@@ -56,12 +55,11 @@
     },
     { immediate: true } // Run immediately when the component is mounted
   );
-  // No props or logic for now, but this structure allows easy expansion later.
 </script>
 
 <style>
   header {
-    transition: color 0.3s ease; /* Smooth transition for text color */
+    transition: color 0.2s ease;
   }
   .svg-white path.i-48514998__stroke {
     stroke: #fff;

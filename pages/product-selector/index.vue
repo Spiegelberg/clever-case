@@ -26,7 +26,6 @@
 
 <script setup lang="ts">
   import { steps, type Step } from '~/data/stepsData'; // Import steps and interface
-  const router = useRouter();
   // Define page metadata
   definePageMeta({
     layoutProps: {
@@ -34,8 +33,8 @@
       theme: 'light',
     },
   });
-  // Access the router instance
 
+  const router = useRouter();
   const currentStepIndex = ref(0);
 
   // Type safety with the Step interface
@@ -69,5 +68,3 @@
     canProceed.value = !!answer; // Enable "Next" button when there's an answer
   };
 </script>
-
-<style scoped></style>

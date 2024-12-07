@@ -18,12 +18,11 @@ export default {
         cleverTint: '#F2F5F5',
       },
       fontSize: {
-        p: ['0.9375rem', '1.40625rem'], // 15px and 22.5px in rem
-        h1: ['52px', '130%'], // 15px and 22.5px in rem
-        h2: ['36px', '140%'], // 15px and 22.5px in rem
-        h3: ['26px', '140%'], // 15px and 22.5px in rem
-        menu: ['0.9375rem', '1.40625rem'], // 15px and 22.5px in rem
-        hero: ['3.25rem', '130%'], // 15px and 22.5px in rem
+        p: ['0.9375rem', '1.40625rem'],
+        h1: ['52px', '130%'],
+        h2: ['36px', '140%'],
+        h3: ['26px', '140%'],
+        hero: ['3.25rem', '130%'],
       },
       gap: {
         '18px': '1.125rem',

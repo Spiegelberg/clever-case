@@ -20,25 +20,9 @@
       <!-- Benefits List -->
       <ul class="mb-10 space-y-4">
         <li v-for="(benefit, index) in benefits" :key="index" class="flex items-start gap-3">
-          <!-- Checkmark Icon -->
-          <svg
-            width="20"
-            height="20"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            class="text-white"
-          >
-            <path
-              d="M5 12l4 4L19 7"
-              stroke="#fff"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
+          <Checkmark width="24px" height="24px" />
           <!-- Benefit Text -->
-          <span class="text-base">{{ benefit }}</span>
+          <span class="text-base font-light">{{ benefit }}</span>
         </li>
       </ul>
 
@@ -51,9 +35,8 @@
           Prøv igen ↻
         </button>
         <NuxtLink
-          to="https://clever.dk/opladning-med-abonnement"
+          to="/"
           class="flex-1 bg-white text-center text-cleverDark flex justify-around items-center px-6 py-2 gap-2 hover:bg-gray-200 transition"
-          target="_blank"
         >
           <div class="flex items-center">
             Se Clever One
@@ -81,6 +64,8 @@
 </template>
 
 <script setup lang="ts">
+  import Checkmark from '~/assets/icons/checkmark.svg?component';
+
   definePageMeta({
     layoutProps: {
       backgroundImage: null, // Set the background image to null
@@ -96,10 +81,6 @@
 
   // Function to reset or navigate back
   const tryAgain = () => {
-    // Navigate back to the first step or home page
     navigateTo('/product-selector');
   };
 </script>
-
-<!-- <style scoped src="@/styles/default_layout.css" /> -->
-<style scoped></style>

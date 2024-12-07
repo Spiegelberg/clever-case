@@ -17,6 +17,7 @@
               : 'from-transparent via-transparent to-transparent'
         "
       ></div>
+
       <div class="relative z-10 h-full m-auto px-12">
         <slot />
       </div>
@@ -45,12 +46,12 @@
   // Function to update the background image
   const updateBackgroundImage = () => {
     const layoutProps = (route.meta.layoutProps as LayoutProps) || {};
-    backgroundImage.value = layoutProps.backgroundImage ?? null; // Fallback to null
+    backgroundImage.value = layoutProps.backgroundImage ?? null;
   };
 
   const updateLayoutProps = () => {
     const layoutProps = (route.meta.layoutProps as LayoutProps) || {};
-    backgroundImage.value = layoutProps.backgroundImage ?? null; // Fallback to null
+    backgroundImage.value = layoutProps.backgroundImage ?? null;
     theme.value = layoutProps.theme || 'light'; // Update theme dynamically
   };
 
